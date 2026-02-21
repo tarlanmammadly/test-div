@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Simple Blog</title>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}
+    (window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', 'YOUR_PIXEL_ID'); 
+    fbq('track', 'PageView');
+
+    function sendLeadEvent() {
+      fbq('track', 'Lead');
+      alert("Lead event sent!");
+    }
+  </script>
+
+  <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"/>
+  </noscript>
+  <!-- End Meta Pixel Code -->
+
+</head>
+
+<body style="margin:0; font-family:Arial, sans-serif; background:#f4f6f9;">
+
+  <!-- Header -->
+  <header style="background:#1877F2; padding:20px; text-align:center; color:white;">
+    <h1 style="margin:0;">My Simple Blog</h1>
+    <p style="margin:5px 0 0;">Insights, Marketing & Tech</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav style="background:white; padding:15px; text-align:center; border-bottom:1px solid #ddd;">
+    <a href="#" style="margin:0 15px; text-decoration:none; color:#1877F2;">Home</a>
+    <a href="#" style="margin:0 15px; text-decoration:none; color:#1877F2;">About</a>
+    <a href="#" style="margin:0 15px; text-decoration:none; color:#1877F2;">Contact</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main style="max-width:800px; margin:40px auto; padding:20px; background:white; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+
+    <article style="margin-bottom:40px;">
+      <h2 style="color:#333;">How to Test Meta Pixel on GitHub Pages</h2>
+      <p style="color:#666; line-height:1.6;">
+        In this guide, we explain how to deploy your Meta Pixel using GitHub Pages and verify it inside Events Manager.
+      </p>
+      <button onclick="sendLeadEvent()" 
+        style="background:#1877F2; color:white; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+        Send Lead Event
+      </button>
+    </article>
+
+    <article>
+      <h2 style="color:#333;">Why Event Tracking Matters</h2>
+      <p style="color:#666; line-height:1.6;">
+        Event tracking allows advertisers to measure conversions, optimize campaigns, and build better audiences.
+      </p>
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer style="background:#222; color:white; text-align:center; padding:20px; margin-top:40px;">
+    <p style="margin:0;">© 2026 My Simple Blog</p>
+  </footer>
+
+</body>
+</html>
